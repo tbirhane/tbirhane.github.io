@@ -1,10 +1,9 @@
 
 *{margin: 10px; border: 5px;
-    alignment: center;
-    alignment: center;
+    text-align: center;
     background-color: gainsboro}
 .header{ font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    alignment: center;
+    text-align: center;
     font-size: 30px}
 #profile{ color: black;
     background-color: gainsboro;
@@ -23,5 +22,5 @@
 p{font-size: 14px; background-color: white;
     color: black}
 #footer{background-color: aqua;
-    alignment: center;
+    text-align: center;
     text-align: center}
