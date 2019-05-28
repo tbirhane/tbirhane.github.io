@@ -1,0 +1,27 @@
+
+*{margin: 10px; border: 5px;
+    alignment: center;
+    alignment: center;
+    background-color: gainsboro}
+.header{ font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    alignment: center;
+    font-size: 30px}
+#profile{ color: black;
+    background-color: gainsboro;
+    text-align: center}
+#abooutme{background-color: darkslategray;
+        color: white;
+        font-family: 'DejaVu Sans Mono', monospace; }
+#myclasses{background-color: cadetblue;
+            color: black;font-family: 'DejaVu Sans', Arial, Helvetica}
+
+#mymovies{background-color: cadetblue;
+    color: black;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; }
+#mymood{background-color: gainsboro;
+    color: black;}
+p{font-size: 14px; background-color: white;
+    color: black}
+#footer{background-color: aqua;
+    alignment: center;
+    text-align: center}
