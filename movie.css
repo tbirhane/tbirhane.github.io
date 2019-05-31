@@ -64,16 +64,7 @@ h1{text-align: center;
     box-sizing: border-box;
     margin-bottom: 10pt;
 }
-/*
-.box-img{
-    margin: 0px;
-    padding-right: 5px;
-    float: left;
-    height: 20px;
 
-}
-
- */
 #left-div{
     float: left;
     width: 267px;
@@ -114,5 +105,8 @@ h1{text-align: center;
 #footer{position: relative;
     left: 0px;
     bottom: -198px;
-
+    
     background-color: #A2B964}
+ul{
+    list-style-type: none;
+}
