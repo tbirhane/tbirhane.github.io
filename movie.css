@@ -1,3 +1,4 @@
+/*Style the body of the page*/
 body{background-image: url("tmnt-images/background.png");
     font-size: 8pt;
     font-family: Verdana, Tahoma, sans-serif;
@@ -81,9 +82,9 @@ h1{text-align: center;
 #validation{position: fixed;
     bottom: 0px;
     right: 0px;
-    opacity: 50%;
-
 }
+.validate{opacity: 50%
+    }
 .box-image{ float: left;
     padding-right: 5px;
     }
@@ -105,7 +106,7 @@ h1{text-align: center;
 #footer{position: relative;
     left: 0px;
     bottom: -198px;
-    
+
     background-color: #A2B964}
 ul{
     list-style-type: none;
