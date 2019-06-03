@@ -12,7 +12,7 @@ function pigLatin() {
     var textAreaObject = document.getElementById("text-area");
     obj = textAreaObject;
     var text = obj.value;
-    alert(text);
+
     var piglatin;
     var ch =text.charAt(0);
     if(ch =='a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'v'){
@@ -21,7 +21,7 @@ function pigLatin() {
     else
        for(var i=1; i< text.length; i++){
             if(text.charAt(i) =='a' || text.charAt(i) == 'e' || text.charAt(i) == 'i' || text.charAt(i) == 'o' || text.charAt(i) == 'v') {
-                alert(text.charAt(i));
+
                // piglatin = text.substring(i, text.length) + text.substring(0, i) + "ay";
                 obj.value = text.substring(i, text.length) + text.substring(0, i) + "ay";
                 break;
