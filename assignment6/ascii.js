@@ -1,6 +1,17 @@
+"use strict";
 var indecies = ["Blank", "Custom", "Exercise", "Juggler", "Bike", "Dive"];
+var pos = 0;
+var timerId;
+var textAreaObj;
+var text;
+var textArray;
+var delay = 250;
+
 window.onload = function(){
-    var textAreaObj = document.getElementById("textArea");
+     textAreaObj = document.getElementById("textArea");
+     text = textAreaObj.value;
+     //textArray = text.split("=====\n");
+
     var textAreaValue = ANIMATIONS["Blank"] +
         ANIMATIONS["Custom"] +
         ANIMATIONS["Exercise"] +
@@ -8,14 +19,14 @@ window.onload = function(){
         ANIMATIONS["Bike"] +
         ANIMATIONS["Dive"];
     textAreaObj.value = textAreaValue;
+    textArray = (textAreaObj.value).split("=====\n");
 }
 function animationText() {
     var textAreaObj = document.getElementById("textArea");
-    //alert(textAreaObj);
     var fieldSetObj = document.getElementById("aniType");
     var  choice = fieldSetObj.value;
-    //alert(choice);
     textAreaObj.value = ANIMATIONS[choice];
+    textArray = (textAreaObj.value).split("=====\n");
 }
 
 function setFontSize() {
@@ -42,26 +53,33 @@ function setFontSize() {
     }
 
 }
+
+
+
 function animate() {
-    var textAreaObject = document.getElementById("textArea");
-    // var top = window.getComputedStyle(textAreaObject, null).getPropertyValue("top");
-    // var left = window.getComputedStyle(textAreaObject, null).getPropertyValue("left");
-    //alert(fontSize);
-    var text = textAreaObject.value;
-    var newText = text.slice(0, text.length/2) + "\n" + text.slice(text.length/2);
-    textAreaObject.value = newText;
-    // textAreaObject.style.top = parseFloat(top) + 1 + "px";
-    // textAreaObject.style.left = parseFloat(left) + 1 + "px";
+    console.log(textArray.length);
+   // alert(textArray[pos]);
+    textAreaObj.value = textArray[pos];
+    pos++;
+    if(pos == textArray.length) {
+        pos = 0;
+    }
 }
 
-var timerId;
 function animation() {
     if(!timerId){
-        timerId = setInterval(animate, 250);
+        timerId = setInterval(animate, delay);
     }
-    /*animate*/
 }
 function stopAnimation(){
     clearInterval(timerId);
     timerId = null;
+}
+
+function changeSpeed() {
+    var checkboxObj = document.getElementById("speed-checkbox");
+    var turbo = document.getElementById("speed-turbo");
+    if(checkboxObj.checked){
+        delay = 50;
+    }
 }
