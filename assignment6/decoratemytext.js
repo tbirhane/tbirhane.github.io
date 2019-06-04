@@ -5,8 +5,6 @@ function modify(){
     var fontSize = window.getComputedStyle(textAreaObject, null).getPropertyValue("font-size");
     //alert(fontSize);
     textAreaObject.style.fontSize = parseFloat(fontSize) + 2 + "px";
-   
-    
 }
 function pigLatin() {
     var textAreaObject = document.getElementById("text-area");
@@ -42,8 +40,8 @@ function modifycheckbox() {
     else
         textAreaObject.style.fontWeight = "normal";
 }
-var timerId;
 
+var timerId;
 function timer() {
     if(!timerId){
         timerId = setInterval(modify, 500);

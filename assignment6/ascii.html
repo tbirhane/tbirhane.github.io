@@ -15,8 +15,8 @@
     <div id="control-containers">
         <fieldset class="controls">
             <legend>Play Controls</legend>
-            <button onclick="">Start</button>
-            <button>Stop</button>
+            <button onclick="animation()">Start</button>
+            <button onclick="stopAnimation()">Stop</button>
         </fieldset>
 
         <fieldset  class="controls">
@@ -33,10 +33,13 @@
 
         <fieldset class="controls">
             <legend>Size</legend>
-            <select>
+            <select id="fontsizeId" onchange="setFontSize()">
+                <option>Tiny</option>
                 <option>Small</option>
-                <option>Medium</option>
-                <option>Big</option>
+                <option selected >Medium</option>
+                <option>Large</option>
+                <option>Extra Large</option>
+                <option>XXL</option>
             </select>
         </fieldset>
 
@@ -51,6 +54,9 @@
         </a>
         <a href="https://jigsaw.w3.org/css-validator/check/referer">
             <img src="w3c-css.png" alt="Valid CSS!"/>
+        </a>
+        <a href="https://webster.cs.washington.edu/jslint/?referer">
+            <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
         </a>
     </p>
 </div>
