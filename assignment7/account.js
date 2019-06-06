@@ -1,6 +1,6 @@
 (function () {
-    "use strict";
-    var btnCreateObj;
+    //"use strict";
+    var accountInfoList = [];
     var accountModule = function () {
         var account = {
             name: ' ',
@@ -19,21 +19,27 @@
         var balance = document.getElementById("balance");
 
         var account = accountModule();
-        account.create(name, balance);
+        account.create(name.value, balance.value);
 
         return account;
     }
 
     function accountInfoList() {
         var account = createAccount();
+        accountInfoList.push(account);
         var textAreaObj = document.getElementById("textarea");
-        textAreaObj.value = account.name + ": " + account.balance;
+
+        //textAreaObj.value += account.name + ": " + account.balance;
+        var accounts;
+        for(var i =0 ; i < accountInfoList.length; i++){
+            accounts += accountInfoList[i].name + ": "+ accountInfoList[i].balance + "\n";
+        }
+        textAreaObj.value = accounts;
     }
      function getObjects() {
-         btnCreateObj = document.getElementById("btnCreateA");
+        var btnCreateObj = document.getElementById("btnCreateA");
+         btnCreateObj.onclick = accountInfoList;
     }
     window.onload = getObjects;
-    if (btnCreateObj)
-            btnCreateObj.onclick = accountInfoList;
 
 })();
