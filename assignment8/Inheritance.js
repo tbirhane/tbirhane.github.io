@@ -41,3 +41,40 @@ function start() {
 }
 start();
 })();
+/* this is the class implementation of the above code
+class CreateBicyclePrototye{
+    constractor(speed){
+        this._speed = speed;
+    }
+     applyBrake(value) {
+        this._speed -= value;
+    }
+     speedup(value) {
+        this._speed += value;
+    }
+    getSpeed(){
+        return this._speed;
+    }
+
+}
+
+class CreateMountainBikeProtoype extends CreateBicyclePrototye {
+
+
+    constractor(speed) {
+        super.constractor(speed);
+        this._gear = 1;
+    }
+
+
+    setGear(gearval) {
+        this._gear = gearval;
+    }
+}
+var bicyclePrototype = new CreateBicyclePrototye(0);
+var mountainBikePrototype = new CreateMountainBikeProtoype(0);
+bicyclePrototype.speedup(10);
+console.log(bicyclePrototype.getSpeed());
+
+
+ */
