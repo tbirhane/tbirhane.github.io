@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
     function createBicyclePrototye() {
     var obj = {
         speed: 0,
