@@ -33,11 +33,12 @@ function win() {
 $(function () {
     $('#end').mouseover(message);
 });
-function message() {
+function message(evt) {
     if(status == 1)
         alert("you win");
     if (status == 0)
         alert("Sorry, you loose");
+    evt.preventDefault();
     status = 0;
 }
 $(function () {
@@ -45,4 +46,4 @@ $(function () {
 });
 function reset() {
     $('boun')
-}
+}``

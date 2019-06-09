@@ -17,6 +17,7 @@ window.onload = function() {
          bpiece[i][0] = right;
          bpiece[i][1] = top;
         //
+
         puzzle[i].style.backgroundPosition = "-"+bpiece[i][0]+"px -"+bpiece[i][1]+"px";
         row ++;
         if (row === 4){top += 100; right = 0; row = 0; } else {right +=100;}
@@ -172,3 +173,4 @@ var mopiece = function(){
         }
         puzzle[i].observe('click', movepiece); }
 }   ;
+
