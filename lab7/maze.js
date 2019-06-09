@@ -44,6 +44,4 @@ function message(evt) {
 $(function () {
     $('#start').click(reset);
 });
-function reset() {
-    $('boun')
-}``
+
