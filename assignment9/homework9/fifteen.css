@@ -18,10 +18,7 @@ body, button {
 
 /* This class should be applied to each of the 15 puzzle pieces. */
 .puzzlepiece {
-	display: flex;
-	flex-direction: row;
-	flex: 4;
-	background-image: url(background.jpg);
+	background-image: url("background.jpg");
 	border: 5px solid black;
 	width: 90px;
 	height: 90px;
@@ -54,11 +51,11 @@ body, button {
 init = function() {
     var puzzleArea = document.getElementById('puzzlearea');
     var divs = puzzleArea.getElementsByTagName("div");
-      
+
     // initialize each piece
     for (var i=0; i< divs.length; i++) {
         var div = divs[i];
-        
+
         // calculate x and y for this piece
         var x = ((i % 4) * 100) ;
         var y = (Math.floor(i / 4) * 100) ;
@@ -69,11 +66,11 @@ init = function() {
         div.style.top = y + 'px';
         div.style.backgroundImage = 'url("background.jpg")';
         div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
-        
+
         // store x and y for later
         div.x = x;
-        div.y = y; 
-    }        
+        div.y = y;
+    }
 };
 */
 
